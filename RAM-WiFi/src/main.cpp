@@ -27,12 +27,12 @@ int command, value;
  * Main function to handle requests from the WebApp frontend.
  * Using the `fetch()` API in JavaScript, requests are made by the frontend
  * and will be handled here. This function works by making a request to `192.168.4.1/?cmd=`
- * with the appended command string (ie: `1-2-3-4-5` of the format `command-args0->args3`)
+ * with the appended command string (ie: `1-2` of the format `command-arg`)
  * as a query string.
  * 
  * Only the "cmd" parameter string is read, the rest are ignored.
- * For example, for a query string of `/?cmd=1-2-3-4-5&a=b, everything after `-5` will be ignored.
- * Similarly, for a query string of `/?a=b&cmd=1-2-3-4-5&c=d`, `a=b&` and `&c=d` will all be ignored.
+ * For example, for a query string of `/?cmd=1-2-3-4-5&a=b, everything after `-2` will be ignored.
+ * Similarly, for a query string of `/?a=b&cmd=1-2-3-4-5&c=d`, `a=b&` and `-3-4-5&c=d` will all be ignored.
  * 
  * If no command is given, this function acts as a `handleRoot()`:
  * Handles a request to access the index of the WebApp.
@@ -77,7 +77,7 @@ void commandHandler() {
 /**
  * - Initializes Serial communication for debugging with a baud rate of 115200.
  * - Initializes an HTTP WebServer on port 80
- * - Initilizes the hidden access point with an SSID of `RAM-BOT` and a password of `RAM_RANCH`. 
+ * - Initilizes the hidden access point with an SSID of `RAM-BOT` and a password of `REDACTED`. 
  *   This access point also has a limit of 1 simultaneously connected client.
  * 
  * (idk if a WebSocket is possible and if so that would be faster but that could be a
@@ -86,7 +86,7 @@ void commandHandler() {
 void setup() {
     Serial.begin(BAUD_RATE);
     Serial1.begin(BAUD_RATE);
-    WiFi.softAP("RAM-BOT", "RAM_RANCH", 1, 1, 2); //channel 1, hidden, max 2 clients
+    WiFi.softAP("RAM-BOT", "REDACTED", 1, 1, 2); //channel 1, hidden, max 2 clients
 
     IPAddress myIP = WiFi.softAPIP();
     Serial.print("AP IP address: ");
