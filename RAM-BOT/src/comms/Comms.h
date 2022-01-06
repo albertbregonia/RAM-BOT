@@ -1,0 +1,13 @@
+#define BAUD_RATE 115200
+
+enum Command {
+    MOVE_FORWARD,
+    MOVE_BACKWARD,
+    TURN_LEFT,
+    TURN_RIGHT,
+    LEFT_SWEEP,
+    RIGHT_SWEEP,
+    SWEEP_ROUTINE,
+    RAM,
+    STOP,
+};

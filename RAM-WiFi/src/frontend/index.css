@@ -1,0 +1,142 @@
+:root {
+    --accent: #0e0f17;
+    --shadow: black;
+    --accentt: rgba(11, 12, 17, 0.82);
+    --highlight: #d27af0;
+    --highlight2: #267dff;
+    --fg: ghostwhite;
+    --fg0: gray;
+    --bg: #141520;
+
+    overflow: hidden;
+    font-family: Arial;
+    font-size: large;
+    color: var(--fg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+*::-webkit-scrollbar-track, *::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+button:focus, select:focus, textarea:focus, input:focus {
+    outline: none;
+}
+
+body {
+    position: relative;
+    background: var(--bg);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#panel {
+    position: relative;
+    width: calc(100% - 50px);
+    height: 100%;
+    margin: 25px;
+    background-color: var(--accent);
+    border-radius: 50px;
+    border-color: var(--fg);
+}
+
+#bot-name, h3 {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+
+#top-controls, #bottom-controls, #visuals {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    border: 2px solid var(--fg);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#visuals {
+    height: 20%;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.joystick {
+    background-color: var(--highlight2);
+    height: 192px;
+    width: 192px;
+    border-radius: 64px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    margin: 64px;
+    box-shadow: 0 0 20px 1px black;
+}
+
+.stick, .dial {
+    background-color: var(--fg);
+    border-radius: 64px;
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    touch-action: none;
+    text-align: center;
+    box-shadow: 0 0 20px 1px black;
+}
+
+.dial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accentt);
+}
+
+.dial div {
+    width: min-content;
+    position: absolute;
+    top: 0;
+}
+
+#movement-ui {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    right: 0;
+    width: 50%;
+    height: 30%;
+}
+
+#accelerator, #reverse, .weapon-button {
+    background-color: var(--highlight2);
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid var(--fg);
+    color: var(--fg);
+    transition: box-shadow ease-in-out 250ms;
+}
+
+.moving {
+    box-shadow: 0 0 10px 10px var(--highlight2);
+}

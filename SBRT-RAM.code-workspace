@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "RAM-WiFi"
+		},
+		{
+			"name": "RAM-BOT",
+			"path": "RAM-BOT"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "RAM-WiFi",
+		"liveServer.settings.port": 5501
+	}
+}
