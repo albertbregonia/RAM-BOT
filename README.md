@@ -9,3 +9,7 @@ The team consists of:
 - Adam Nebylitsa
 - Chris Moriarty
 - Sila Atalar
+
+# Repository Structure
+- The [`RAM-BOT`](https://github.com/albertbregonia/ram-bot/tree/main/RAM-BOT) directory consists of code put on the Arduino Nano Every
+- The [`RAM-WiFi`](https://github.com/albertbregonia/ram-bot/tree/main/RAM-WiFi) directory consists of code put on the NodeMCU ESP8266
